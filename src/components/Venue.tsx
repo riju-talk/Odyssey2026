@@ -2,7 +2,7 @@ import { MapPin } from "lucide-react";
 
 const Venue = () => {
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 bg-background relative overflow-hidden">
       {/* Decorative Top Wave */}
       <div className="absolute top-0 left-0 right-0">
         <svg viewBox="0 0 1440 60" className="w-full h-auto">
@@ -13,17 +13,17 @@ const Venue = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-12">
+      <div className="container mx-auto px-4 relative z-10 pt-8 sm:pt-12">
         {/* Ornate Header */}
-        <div className="text-center mb-12">
-          <div className="inline-block bg-primary px-12 py-4 relative">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="inline-block bg-primary px-6 sm:px-8 md:px-12 py-3 sm:py-4 relative">
             {/* Decorative corners */}
             <div className="absolute -left-2 -top-2 w-6 h-6 border-t-4 border-l-4 border-secondary" />
             <div className="absolute -right-2 -top-2 w-6 h-6 border-t-4 border-r-4 border-secondary" />
             <div className="absolute -left-2 -bottom-2 w-6 h-6 border-b-4 border-l-4 border-secondary" />
             <div className="absolute -right-2 -bottom-2 w-6 h-6 border-b-4 border-r-4 border-secondary" />
             
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground tracking-wider">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-wider">
               VENUE
             </h2>
           </div>
@@ -44,21 +44,21 @@ const Venue = () => {
               ))}
             </div>
 
-            <div className="flex items-start gap-4 mb-6">
-              <MapPin className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+            <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-6">
+              <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-primary flex-shrink-0 sm:mt-1" />
               <div>
-                <h3 className="font-display text-2xl md:text-3xl font-semibold text-primary mb-4">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-semibold text-primary mb-3 sm:mb-4">
                   Follow us on social media to stay updated!
                 </h3>
-                <p className="text-foreground/80 text-lg leading-relaxed font-body">
+                <p className="text-foreground/80 text-base sm:text-lg leading-relaxed font-body">
                   Stay tuned for all the exciting developments and sneak peeks leading up to the grand event.
                 </p>
               </div>
             </div>
 
             {/* Decorative Frame - Placeholder for venue details */}
-            <div className="mt-8 bg-primary/5 rounded-lg p-8 border-2 border-dashed border-primary/30 min-h-[200px] flex items-center justify-center">
-              <p className="text-muted-foreground text-center font-body italic">
+            <div className="mt-6 sm:mt-8 bg-primary/5 rounded-lg p-6 sm:p-8 border-2 border-dashed border-primary/30 min-h-[150px] sm:min-h-[200px] flex items-center justify-center">
+              <p className="text-muted-foreground text-center font-body italic text-sm sm:text-base">
                 Venue details coming soon...
               </p>
             </div>

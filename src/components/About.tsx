@@ -29,8 +29,7 @@ const About = () => {
 
       {/* Main maroon panel */}
       <div
-        className="relative z-10 mx-auto px-6 pt-40 pb-24 md:pb-32 lg:pb-36"
-        style={{ maxWidth: 960 }}
+        className="relative z-10 mx-auto px-4 sm:px-6 pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-24 md:pb-32 lg:pb-36 max-w-[960px]"
       >
         {/* Title block */}
         <div className="text-center mb-8">
@@ -38,28 +37,28 @@ const About = () => {
           <img
             src="/assets/logo-mark.png"
             alt="Odyssey logo mark (placeholder)"
-            className="mx-auto w-20 h-20 md:w-24 md:h-24 mb-4 object-contain"
+            className="mx-auto w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-3 md:mb-4 object-contain"
           />
 
           <h2
             id="about-heading"
-            className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight tracking-widest text-amber-200"
+            className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight tracking-wide sm:tracking-widest text-amber-200"
             style={{ fontVariant: "small-caps" }}
           >
             ABOUT
           </h2>
 
-          <h3 className="mt-0 font-display text-4xl md:text-6xl lg:text-7xl leading-tight tracking-widest text-amber-200">
+          <h3 className="mt-0 font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight tracking-wide sm:tracking-widest text-amber-200">
             Odyssey
           </h3>
 
           {/* decorative divider */}
-          <div className="mx-auto mt-6 w-48 h-1 rounded-full bg-amber-200/90" />
+          <div className="mx-auto mt-4 md:mt-6 w-32 sm:w-48 h-1 rounded-full bg-amber-200/90" />
         </div>
 
         {/* Description copy panel */}
         <div className="max-w-3xl mx-auto">
-          <p className="text-center text-amber-100/90 text-base md:text-lg lg:text-xl leading-relaxed font-body">
+          <p className="text-center text-amber-100/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-body">
             Get ready for an unforgettable celebration of culture, creativity,
             and camaraderie at the Indian Institute of Information Technology,
             Delhi. Ralto + Odyssey is back, and this year promises to be bigger

@@ -3,7 +3,7 @@ import { UserPlus } from "lucide-react";
 
 const Registrations = () => {
   return (
-    <section className="py-16 md:py-24 bg-background relative">
+    <section className="py-12 sm:py-16 md:py-24 bg-background relative">
       {/* Decorative Wave Top */}
       <div className="absolute top-0 left-0 right-0">
         <svg viewBox="0 0 1440 80" className="w-full h-auto">
@@ -15,7 +15,7 @@ const Registrations = () => {
       </div>
 
       {/* Golden scallop border */}
-      <div className="absolute top-20 left-0 right-0 h-8 flex justify-center items-center gap-1">
+      <div className="hidden sm:flex absolute top-20 left-0 right-0 h-8 justify-center items-center gap-1">
         {[...Array(30)].map((_, i) => (
           <div
             key={i}
@@ -25,44 +25,44 @@ const Registrations = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 pt-32 pb-8 relative z-10">
+      <div className="container mx-auto px-4 pt-20 sm:pt-32 pb-8 relative z-10">
         {/* Ornate Header */}
-        <div className="text-center mb-12">
-          <div className="inline-block bg-primary px-12 py-4 relative">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="inline-block bg-primary px-6 sm:px-8 md:px-12 py-3 sm:py-4 relative">
             <div className="absolute -left-2 -top-2 w-6 h-6 border-t-4 border-l-4 border-secondary" />
             <div className="absolute -right-2 -top-2 w-6 h-6 border-t-4 border-r-4 border-secondary" />
             <div className="absolute -left-2 -bottom-2 w-6 h-6 border-b-4 border-l-4 border-secondary" />
             <div className="absolute -right-2 -bottom-2 w-6 h-6 border-b-4 border-r-4 border-secondary" />
             
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground tracking-wider">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-wider">
               REGISTRATIONS
             </h2>
           </div>
         </div>
 
         {/* Registration Buttons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-card p-8 rounded-lg border-4 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <h3 className="font-display text-2xl font-bold text-primary mb-4 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+          <div className="bg-card p-6 sm:p-8 rounded-lg border-4 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4 text-center">
               Individual Registration
             </h3>
-            <p className="text-muted-foreground text-center mb-6 font-body">
+            <p className="text-muted-foreground text-center mb-4 sm:mb-6 font-body text-sm sm:text-base">
               Register as an individual participant
             </p>
-            <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-display text-lg py-6">
+            <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-display text-base sm:text-lg py-5 sm:py-6">
               <UserPlus className="mr-2" />
               Register Now
             </Button>
           </div>
 
-          <div className="bg-card p-8 rounded-lg border-4 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <h3 className="font-display text-2xl font-bold text-primary mb-4 text-center">
+          <div className="bg-card p-6 sm:p-8 rounded-lg border-4 border-primary shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4 text-center">
               Team Registration
             </h3>
-            <p className="text-muted-foreground text-center mb-6 font-body">
+            <p className="text-muted-foreground text-center mb-4 sm:mb-6 font-body text-sm sm:text-base">
               Register your team for group events
             </p>
-            <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-display text-lg py-6">
+            <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-display text-base sm:text-lg py-5 sm:py-6">
               <UserPlus className="mr-2" />
               Register Team
             </Button>
