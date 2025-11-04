@@ -9,27 +9,6 @@ const Events = () => {
 
   return (
     <section className="py-12 sm:py-16 md:py-24 bg-primary relative overflow-hidden">
-      {/* Bunting Flags */}
-      <div className="absolute top-0 left-0 right-0 flex justify-center">
-        <svg className="w-full h-12 sm:h-16" viewBox="0 0 1440 64" preserveAspectRatio="none">
-          {[...Array(20)].map((_, i) => {
-            const colors = ['var(--bunting-pink)', 'var(--bunting-blue)', 'var(--bunting-orange)', 'var(--bunting-purple)'];
-            const color = `hsl(${colors[i % colors.length]})`;
-            return (
-              <g key={i} className="animate-swing" style={{ animationDelay: `${i * 0.1}s` }}>
-                <polygon
-                  points={`${i * 72 + 20},0 ${i * 72 + 50},0 ${i * 72 + 35},30`}
-                  fill={color}
-                  stroke="hsl(var(--gold))"
-                  strokeWidth="2"
-                />
-              </g>
-            );
-          })}
-          <line x1="0" y1="0" x2="1440" y2="0" stroke="hsl(var(--gold))" strokeWidth="2" />
-        </svg>
-      </div>
-
       <div className="container mx-auto px-4 pt-16 sm:pt-20">
         {/* Header with decorative line */}
         <div className="text-center mb-8 sm:mb-12">
