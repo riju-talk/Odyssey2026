@@ -1,6 +1,26 @@
+import React from "react";
 import { Facebook, Instagram, Twitter, Mail, MapPin } from "lucide-react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const scrollToSection = (id: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
+    if (e) e.preventDefault();
+    // try section id first, then a heading id like "about-heading"
+    const target =
+      document.getElementById(id) ||
+      document.getElementById(`${id}-heading`) ||
+      document.querySelector(`[aria-labelledby="${id}-heading"]`);
+
+    if (target) {
+      (target as HTMLElement).scrollIntoView({ behavior: "smooth", block: "start" });
+      // update URL hash without jumping
+      try {
+        history.replaceState(null, "", `#${id}`);
+      } catch {
+        /* ignore in unsupported env */
+      }
+    }
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground py-8 sm:py-12 relative overflow-hidden">
       <div className="container mx-auto px-4 pt-12 sm:pt-16">
@@ -22,22 +42,38 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 font-body text-sm sm:text-base">
               <li>
-                <a href="#about" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <a
+                  href="#about"
+                  onClick={(e) => scrollToSection("about", e)}
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#events" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <a
+                  href="#events"
+                  onClick={(e) => scrollToSection("events", e)}
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
                   Events
                 </a>
               </li>
               <li>
-                <a href="#register" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <a
+                  href="#register"
+                  onClick={(e) => scrollToSection("register", e)}
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
                   Register
                 </a>
               </li>
               <li>
-                <a href="#sponsors" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <a
+                  href="#sponsors"
+                  onClick={(e) => scrollToSection("sponsors", e)}
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
                   Sponsors
                 </a>
               </li>
@@ -60,22 +96,22 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex gap-3 sm:gap-4 justify-center sm:justify-start">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center hover:scale-110 transition-transform"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center hover:scale-110 transition-transform"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center hover:scale-110 transition-transform"
                 aria-label="Twitter"
               >
